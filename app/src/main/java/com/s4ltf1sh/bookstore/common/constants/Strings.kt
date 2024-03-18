@@ -1,0 +1,30 @@
+package com.s4ltf1sh.bookstore.common.constants
+
+object Strings {
+    const val EMPTY = ""
+    const val SPACE = " "
+    const val COMMA = ","
+    const val DOT = "."
+    const val DASH = "-"
+    const val UNDERSCORE = "_"
+    const val SLASH = "/"
+    const val COLON = ":"
+    const val SEMICOLON = ";"
+    const val QUESTION_MARK = "?"
+    const val EXCLAMATION_MARK = "!"
+    const val AMPERSAND = "&"
+    const val EQUALS = "="
+    const val PLUS = "+"
+    const val MINUS = "-"
+    const val ASTERISK = "*"
+    const val PERCENT = "%"
+    const val AT = "@"
+    const val HASH = "#"
+
+    const val UNKNOWN = "unknown"
+    const val ERROR = "error"
+    const val SUCCESS = "success"
+    const val FAILURE = "failure"
+    const val WARNING = "warning"
+    const val SOMETHING_WENT_WRONG = "Something went wrong"
+}
