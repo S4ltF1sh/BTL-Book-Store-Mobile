@@ -4,7 +4,7 @@
     <item android:id="@android:id/mask">
         <shape android:shape="rectangle">
             <solid android:color="?attr/colorControlHighlight" />
-            <corners android:radius="4dp" />
+            <corners android:radius="8dp" />
             <stroke
                 android:width="2dp"
                 android:color="@color/color_main_dark" />
@@ -13,7 +13,7 @@
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <solid android:color="@color/color_main_light" />
-            <corners android:radius="4dp" />
+            <corners android:radius="8dp" />
             <stroke
                 android:width="2dp"
                 android:color="@color/color_main_dark" />

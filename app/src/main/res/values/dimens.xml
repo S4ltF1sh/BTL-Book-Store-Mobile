@@ -1,3 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="icon_size_default">24dp</dimen>
+    <dimen name="btn_header_size_default">48dp</dimen>
+    <dimen name="btn_header_size_search">32dp</dimen>
 </resources>
