@@ -58,4 +58,27 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="already_a_member_signin">Already a member? <b>SignIn</b></string>
+    <string name="txt_book_detail_author_s">Author: <b>%s</b></string>
+    <string name="txt_book_detail_category_s">Category: <b>%s</b></string>
+    <string name="txt_book_detail_rating_s">Rating: <b>%s</b></string>
+    <string name="txt_book_detail_pricing_s">Pricing: <b>%s</b></string>
+    <string name="favorite">Favorite</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="description_colon">Description:</string>
+    <string name="delivering_address">Delivering Address</string>
+    <string name="change">Change</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="add_a_new_delivery_address">Add a New Delivery Address</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="checkout_pay_s">Pay $%s</string>
+    <string name="txt_check_out_success">Payment received!</string>
+    <string name="txt_check_out_message_success">Your order has been validated.</string>
+    <string name="account">Account</string>
+    <string name="username_colon">Username:</string>
+    <string name="address">Address</string>
+    <string name="email_colon">Email:</string>
+    <string name="password_colon">Passworrd:</string>
+    <string name="address_colon">Address:</string>
+    <string name="edit">Edit</string>
 </resources>
