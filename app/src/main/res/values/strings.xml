@@ -81,4 +81,19 @@
     <string name="password_colon">Passworrd:</string>
     <string name="address_colon">Address:</string>
     <string name="edit">Edit</string>
+    <string name="discover">Discover</string>
+    <string name="category">Category</string>
+    <string name="categories">Categories</string>
+    <string name="best_deals">Best Deals</string>
+    <string name="see_more">see more</string>
+    <string name="top">Top</string>
+    <string name="recommended">Recommended</string>
+    <string name="search_title_author">Search title/author</string>
+    <string name="recent">Recent</string>
+    <string name="result_for_s">Result for: %s</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="price_s">$%s</string>
+    <string name="shipping">Shipping</string>
+    <string name="total">Total</string>
 </resources>

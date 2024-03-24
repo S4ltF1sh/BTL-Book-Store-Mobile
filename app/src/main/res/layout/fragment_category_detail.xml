@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/categoryDetailFm_header"
+        layout="@layout/layout_header_default" />
+
+    <LinearLayout
+        android:id="@+id/categoryDetailFm_searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input_text"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="12dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/icon_size_default"
+            android:layout_height="@dimen/icon_size_default"
+            android:src="@drawable/ic_search" />
+
+        <Space
+            android:layout_width="24dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="null"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/search_title_author"
+            android:textColor="@color/text_color_title" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryFm_rvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+</LinearLayout>

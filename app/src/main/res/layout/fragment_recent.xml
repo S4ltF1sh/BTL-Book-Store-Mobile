@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/recentFm_header"
+        layout="@layout/layout_header_search" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/recentFm_toggleGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recentFm_btnRecent"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="@string/recent"
+            android:textColor="@color/ic_selection"
+            app:backgroundTint="@color/bg_selection"
+            app:cornerRadius="14dp"
+            app:icon="@drawable/ic_recent"
+            app:iconSize="24dp"
+            app:iconTint="@color/ic_selection" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recentFm_btnFavorite"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="@string/category"
+            android:textColor="@color/ic_selection"
+            app:backgroundTint="@color/bg_selection"
+            app:cornerRadius="14dp"
+            app:icon="@drawable/ic_heart_favorite"
+            app:iconSize="24dp"
+            app:iconTint="@color/ic_selection" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recentFm_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" />
+</LinearLayout>

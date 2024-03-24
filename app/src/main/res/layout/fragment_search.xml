@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/searchFm_etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_light"
+        android:drawableStart="@drawable/ic_cancel"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:hint="@string/search_title_author"
+        android:padding="12dp" />
+
+    <TextView
+        style="@style/text_title_book_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/result_for_s" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recentFm_rvRecentBooks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+</LinearLayout>
