@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_recent"
+    app:startDestination="@id/recentFragment">
+
+    <fragment
+        android:id="@+id/recentFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainRecentScreen.recentScreen.RecentFragment"
+        android:label="RecentFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainRecentScreen.favoriteScreen.FavoriteFragment"
+        android:label="FavoriteFragment" />
+</navigation>

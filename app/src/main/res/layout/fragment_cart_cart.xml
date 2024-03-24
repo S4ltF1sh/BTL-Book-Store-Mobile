@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_bg"
@@ -18,10 +19,13 @@
         android:layout_marginTop="16dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:fadeScrollbars="true"
         android:orientation="vertical"
         android:paddingHorizontal="16dp"
+        android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_cart" />
 
     <TextView
         style="@style/text_title_book_types"

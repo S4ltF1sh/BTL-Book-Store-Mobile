@@ -96,4 +96,6 @@
     <string name="price_s">$%s</string>
     <string name="shipping">Shipping</string>
     <string name="total">Total</string>
+    <string name="cart_empty">Cart empty</string>
+    <string name="cart_empty_message">Please add some book to continue</string>
 </resources>

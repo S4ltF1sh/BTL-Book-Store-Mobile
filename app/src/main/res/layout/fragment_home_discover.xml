@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_bg"
@@ -9,19 +10,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp">
+        android:orientation="vertical">
 
         <!--    Best Deals    -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 style="@style/text_title_book_types"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
                 android:layout_weight="1"
                 android:text="@string/best_deals" />
 
@@ -39,18 +41,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recoverFm_rvBestDealBooks"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_weight="1"
             android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingBottom="16dp"
+            android:paddingHorizontal="16dp"
+            android:visibility="gone"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         <!--    Top    -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="48dp"
             android:orientation="horizontal">
 
@@ -74,18 +77,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recoverFm_rvTopBooks"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_weight="1"
             android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_book_default" />
 
         <!--    Recommend    -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="48dp"
             android:orientation="horizontal">
 
@@ -109,18 +113,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recoverFm_rvRecommendedBooks"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_weight="1"
             android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_book_default" />
 
         <!--    Latest    -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="48dp"
             android:orientation="horizontal">
 
@@ -144,13 +149,13 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recoverFm_rvLatestBooks"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_weight="1"
             android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_book_default" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

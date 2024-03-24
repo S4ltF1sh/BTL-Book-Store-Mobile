@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main_dark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookCover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/text_b8"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_book_cover_sample_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="96:142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <LinearLayout
+            android:id="@+id/llBookDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBookCover"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvBookCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/category"
+                android:textColor="@color/text_color_light"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvBookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans_semibold"
+                android:lines="2"
+                android:maxLines="2"
+                android:text="Title"
+                android:textColor="@color/text_color_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBookAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/txt_book_detail_author_s"
+                android:textColor="@color/text_color_light"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBookCover"
+            app:layout_constraintTop_toBottomOf="@+id/llBookDetail"
+            app:layout_constraintVertical_bias="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnRemove"
+                style="@style/button_icon_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_minus" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/text_color_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAdd"
+                style="@style/button_icon_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvBookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/price_s"
+                android:textColor="@color/text_color_light"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
