@@ -8,17 +8,39 @@
     android:orientation="vertical"
     android:paddingHorizontal="16dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/searchFm_etSearch"
+    <LinearLayout
+        android:id="@+id/searchFm_llSearchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_button_light"
-        android:drawableStart="@drawable/ic_cancel"
-        android:drawableEnd="@drawable/ic_search"
-        android:drawablePadding="10dp"
-        android:hint="@string/search_title_author"
-        android:padding="12dp" />
+        android:padding="12dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/searchFm_btnCancel"
+            android:layout_width="@dimen/btn_header_size_search"
+            android:layout_height="@dimen/btn_header_size_search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_cancel" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchFm_etSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/search_title_author" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/searchFm_btnSearch"
+            android:layout_width="@dimen/btn_header_size_search"
+            android:layout_height="@dimen/btn_header_size_search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/searchFm_tvResultFor"

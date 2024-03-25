@@ -26,7 +26,17 @@ class CategoryDetailFragment :
 
     override fun initView() {
         super.initView()
+        setupHeader()
         setupRecyclerView()
+    }
+
+    private fun setupHeader() {
+        viewBinding.categoryDetailFmHeader.apply {
+            tvTitle.text = "Classic"
+            btnNavigation.setOnClickListener {
+                popBackStack()
+            }
+        }
     }
 
     private fun setupRecyclerView() {

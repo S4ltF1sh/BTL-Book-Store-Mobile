@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.s4ltf1sh.bookstore.R
+import com.s4ltf1sh.bookstore.activities.MainActivity
 import com.s4ltf1sh.bookstore.base.components.adapters.BaseViewPagerAdapter
 import com.s4ltf1sh.bookstore.base.fragments.BaseFragment
 import com.s4ltf1sh.bookstore.databinding.FragmentHomeContainerBinding
@@ -34,9 +35,17 @@ class HomeContainerFragment :
 
     override fun initView() {
         super.initView()
-
+        setupHeader()
         setupViewPager()
         setupTabLayout()
+    }
+
+    private fun setupHeader() {
+        viewBinding.homeContainerFmHeader.apply {
+            btnSearch.setOnClickListener {
+                handleBtnSearchClick()
+            }
+        }
     }
 
     private fun setupViewPager() {
@@ -52,5 +61,9 @@ class HomeContainerFragment :
                 tab.icon = resources.getDrawable(mPagerAdapter.getIconRes(position), null)
             }.attach()
         }
+    }
+
+    private fun handleBtnSearchClick() {
+        (activity as? MainActivity)?.openSearchScreen()
     }
 }

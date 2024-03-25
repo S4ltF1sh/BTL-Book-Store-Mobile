@@ -27,6 +27,16 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
         setupDemo()
     }
 
+    override fun setupActions() {
+        super.setupActions()
+        setUpSearchBarActions()
+    }
+
+    override fun observeData() {
+        super.observeData()
+        booksAdapter?.submitList(DataDemo.listBookSearchDemo)
+    }
+
     private fun setupDemo() {
         val search = "the"
         viewBinding.apply {
@@ -43,9 +53,14 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
         }
     }
 
-    override fun observeData() {
-        super.observeData()
-        booksAdapter?.submitList(DataDemo.listBookSearchDemo)
+    private fun setUpSearchBarActions() {
+        viewBinding.apply {
+            searchFmBtnSearch.setOnClickListener { handleBtnSearchClick() }
+            searchFmBtnCancel.setOnClickListener { handleBtnCancelClick() }
+            searchFmEtSearch.setOnEditorActionListener { _, _, _ ->
+                true
+            }
+        }
     }
 
     private fun getLayoutManager(): GridLayoutManager {
@@ -55,5 +70,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
 
     private fun getBookListener(): BookDefaultVH.BookListener? {
         return (activity as? MainActivity)?.getBookListener()
+    }
+
+    private fun handleBtnSearchClick() {
+
+    }
+
+    private fun handleBtnCancelClick() {
+        popBackStack()
     }
 }

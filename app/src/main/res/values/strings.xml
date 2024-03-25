@@ -105,4 +105,5 @@
     <string name="lastest">Lastest</string>
     <string name="check_out">Check Out</string>
     <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="detail">Detail</string>
 </resources>

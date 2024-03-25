@@ -20,5 +20,10 @@
         android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.categoryScreen.CategoryFragment"
         android:label="CategoryFragment"
         tools:layout="@layout/fragment_home_category" />
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.categoryScreen.CategoryDetailFragment"
+        android:label="CategoryDetailFragment"
+        tools:layout="@layout/fragment_category_detail" />
 
 </navigation>

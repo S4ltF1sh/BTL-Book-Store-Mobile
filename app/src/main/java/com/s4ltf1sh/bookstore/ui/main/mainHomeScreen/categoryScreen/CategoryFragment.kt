@@ -1,12 +1,12 @@
 package com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.categoryScreen
 
 import android.os.Bundle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.s4ltf1sh.bookstore.R
 import com.s4ltf1sh.bookstore.base.fragments.BaseFragment
 import com.s4ltf1sh.bookstore.common.constants.Const
 import com.s4ltf1sh.bookstore.common.extensions.setMarginDecor
-import com.s4ltf1sh.bookstore.common.extensions.setVerticalMarginDecor
 import com.s4ltf1sh.bookstore.data.DataDemo
 import com.s4ltf1sh.bookstore.data.model.Category
 import com.s4ltf1sh.bookstore.databinding.FragmentHomeCategoryBinding
@@ -51,8 +51,14 @@ class CategoryFragment :
     private fun getCategoryListener(): CategoryVH.CategoryListener {
         return object : CategoryVH.CategoryListener {
             override fun onCategoryClicked(item: Category) {
-
+                handleCategoryClicked(item)
             }
+        }
+    }
+
+    private fun handleCategoryClicked(item: Category) {
+        parentFragment?.parentFragmentManager?.findFragmentById(R.id.mainHome_navHost)?.let {
+            findNavController().navigate(R.id.categoryDetailFragment)
         }
     }
 }
