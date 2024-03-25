@@ -6,4 +6,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainHomeFragment : BaseFragment<FragmentMainHomeBinding>(FragmentMainHomeBinding::inflate) {
+    override val backPressCallback: () -> Boolean
+        get() = {
+            requireActivity().finish()
+            true
+        }
 }

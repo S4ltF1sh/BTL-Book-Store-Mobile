@@ -1,9 +1,11 @@
 package com.s4ltf1sh.bookstore.ui.main.mainCartScreen.cartScreen
 
 import android.os.Bundle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.s4ltf1sh.bookstore.R
 import com.s4ltf1sh.bookstore.base.fragments.BaseFragment
+import com.s4ltf1sh.bookstore.common.extensions.invisible
 import com.s4ltf1sh.bookstore.common.extensions.setVerticalMarginDecor
 import com.s4ltf1sh.bookstore.data.DataDemo
 import com.s4ltf1sh.bookstore.data.model.CartItem
@@ -24,7 +26,16 @@ class CartFragment : BaseFragment<FragmentCartBinding>(FragmentCartBinding::infl
 
     override fun initView() {
         super.initView()
+        setupHeader()
         setupRecyclerView()
+    }
+
+    private fun setupHeader() {
+        viewBinding.header.apply {
+            tvTitle.text = getString(R.string.cart)
+            btnNavigation.invisible()
+            btnNavigation.isEnabled = false
+        }
     }
 
     private fun setupRecyclerView() {
@@ -34,6 +45,13 @@ class CartFragment : BaseFragment<FragmentCartBinding>(FragmentCartBinding::infl
                 R.dimen.margin_zero, R.dimen.margin_default
             )
             cartAdapter?.let { cartFmRvCartItems.adapter = it }
+        }
+    }
+
+    override fun setupActions() {
+        super.setupActions()
+        viewBinding.apply {
+            btnProcessToCheckOut.setOnClickListener { handleBtnProcessToCheckOutClick() }
         }
     }
 
@@ -64,6 +82,12 @@ class CartFragment : BaseFragment<FragmentCartBinding>(FragmentCartBinding::infl
             override fun onRemoveItem(item: CartItem) {
 //                TODO("Not yet implemented")
             }
+        }
+    }
+
+    private fun handleBtnProcessToCheckOutClick() {
+        parentFragmentManager.findFragmentById(R.id.mainCart_navHost)?.let {
+            findNavController().navigate(R.id.checkOutFragment)
         }
     }
 }

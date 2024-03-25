@@ -110,7 +110,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/btnProcessPayment"
+        android:id="@+id/btnProcessToCheckOut"
         style="@style/text_button_dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,5 +120,5 @@
         android:background="@drawable/bg_button_dark"
         android:gravity="center"
         android:paddingVertical="16dp"
-        android:text="@string/checkout_pay_s" />
+        android:text="@string/proceed_to_checkout" />
 </LinearLayout>

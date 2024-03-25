@@ -132,7 +132,7 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: FragmentInfla
         else popBackStackTo(destinationId, inclusive)
     }
 
-    private fun popBackStackTo(@IdRes destinationId: Int, inclusive: Boolean = false): Boolean {
+    fun popBackStackTo(@IdRes destinationId: Int, inclusive: Boolean = false): Boolean {
         return findNavController().popBackStack(destinationId, inclusive)
     }
 
