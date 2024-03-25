@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_main_dark">
 
@@ -83,7 +83,7 @@
             app:layout_constraintVertical_bias="1">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/btnRemove"
+                android:id="@+id/btnMinus"
                 style="@style/button_icon_default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 android:textSize="16sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/btnAdd"
+                android:id="@+id/btnPlus"
                 style="@style/button_icon_default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,5 +121,17 @@
                 android:textColor="@color/text_color_light"
                 android:textSize="20sp" />
         </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnRemove"
+            style="@style/button_icon_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_main_light" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

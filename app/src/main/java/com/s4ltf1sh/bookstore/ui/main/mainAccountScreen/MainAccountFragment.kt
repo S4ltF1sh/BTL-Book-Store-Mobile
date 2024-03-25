@@ -1,7 +1,9 @@
 package com.s4ltf1sh.bookstore.ui.main.mainAccountScreen
 
 import com.s4ltf1sh.bookstore.base.fragments.BaseFragment
-import com.s4ltf1sh.bookstore.databinding.FragmentAccountBinding
+import com.s4ltf1sh.bookstore.databinding.FragmentMainAccountBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainAccountFragment : BaseFragment<FragmentAccountBinding>(FragmentAccountBinding::inflate) {
+@AndroidEntryPoint
+class MainAccountFragment : BaseFragment<FragmentMainAccountBinding>(FragmentMainAccountBinding::inflate) {
 }

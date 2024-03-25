@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBookCover"
@@ -42,7 +40,10 @@
                 android:id="@+id/tvBookTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:fontFamily="@font/open_sans_semibold"
+                android:lines="2"
+                android:maxLines="2"
                 android:text="Title"
                 android:textColor="@color/text_color_light"
                 android:textSize="16sp"
@@ -53,6 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:lines="1"
                 android:text="@string/txt_book_detail_author_s"
                 android:textColor="@color/text_color_light"
                 android:textSize="11sp"
@@ -69,5 +72,6 @@
                 android:textSize="22sp" />
         </LinearLayout>
     </LinearLayout>
+
 
 </com.google.android.material.card.MaterialCardView>

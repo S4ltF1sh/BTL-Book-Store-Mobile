@@ -19,5 +19,9 @@
         android:id="@+id/mainAct_botNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_bg_bot_nav" />
+        android:background="@color/color_bg_bot_nav"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemIconTint="@color/ic_selection"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main_bot_nav" />
 </LinearLayout>

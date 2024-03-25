@@ -98,4 +98,9 @@
     <string name="total">Total</string>
     <string name="cart_empty">Cart empty</string>
     <string name="cart_empty_message">Please add some book to continue</string>
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="log_out">Log out</string>
+    <string name="happy_reading">Happy Reading!</string>
+    <string name="lastest">Lastest</string>
 </resources>

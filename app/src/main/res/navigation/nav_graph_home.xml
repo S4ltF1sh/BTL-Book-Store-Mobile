@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_home"
-    app:startDestination="@id/discoverFragment">
+    app:startDestination="@id/homeContainerFragment">
 
+    <fragment
+        android:id="@+id/homeContainerFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.HomeContainerFragment"
+        android:label="HomeContainerFragment"
+        tools:layout="@layout/fragment_home_container" />
     <fragment
         android:id="@+id/discoverFragment"
         android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.discoverScreen.DiscoverFragment"
-        android:label="DiscoverFragment" />
+        android:label="DiscoverFragment"
+        tools:layout="@layout/fragment_home_discover" />
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.categoryScreen.CategoryFragment"
-        android:label="CategoryFragment" />
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_home_category" />
+
 </navigation>

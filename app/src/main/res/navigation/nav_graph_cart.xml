@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_recent"
     app:startDestination="@id/cartFragment">
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.s4ltf1sh.bookstore.ui.main.mainCartScreen.cartScreen.CartFragment"
-        android:label="CartFragment" >
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart">
         <action
             android:id="@+id/action_cartFragment_to_checkOutFragment"
             app:destination="@id/checkOutFragment" />
@@ -14,7 +16,8 @@
     <fragment
         android:id="@+id/checkOutFragment"
         android:name="com.s4ltf1sh.bookstore.ui.main.mainCartScreen.checkOutScreen.CheckOutFragment"
-        android:label="CheckOutFragment" >
+        android:label="CheckOutFragment"
+        tools:layout="@layout/fragment_cart_check_out">
         <action
             android:id="@+id/action_checkOutFragment_to_checkOutConfirmFragment"
             app:destination="@id/checkOutConfirmFragment" />
@@ -22,5 +25,6 @@
     <fragment
         android:id="@+id/checkOutConfirmFragment"
         android:name="com.s4ltf1sh.bookstore.ui.main.mainCartScreen.checkOutScreen.CheckOutConfirmFragment"
-        android:label="CheckOutConfirmFragment" />
+        android:label="CheckOutConfirmFragment"
+        tools:layout="@layout/fragment_cart_check_out_confirm" />
 </navigation>

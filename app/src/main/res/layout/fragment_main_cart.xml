@@ -1,46 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCart_navHost"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     android:background="@color/color_bg"
-    android:orientation="vertical"
-    android:scrollbars="vertical">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivCheckOutStatus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/img_check_out_success"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <TextView
-        android:id="@+id/tvCartEmpty"
-        style="@style/text_title_fragment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="@string/cart_empty"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCheckOutStatus" />
-
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/cart_empty_message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCartEmpty" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    app:navGraph="@navigation/nav_graph_cart" />

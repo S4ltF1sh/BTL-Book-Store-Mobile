@@ -53,7 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="null"
+            android:background="@null"
             android:ellipsize="end"
             android:fontFamily="@font/open_sans_semibold"
             android:gravity="start|center_vertical"
@@ -87,7 +87,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="null"
+            android:background="@null"
             android:ellipsize="end"
             android:fontFamily="@font/open_sans_semibold"
             android:gravity="start|center_vertical"
@@ -121,7 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="null"
+            android:background="@null"
             android:ellipsize="end"
             android:fontFamily="@font/open_sans_semibold"
             android:gravity="start|center_vertical"
@@ -155,7 +155,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="null"
+            android:background="@null"
             android:ellipsize="end"
             android:fontFamily="@font/open_sans_semibold"
             android:gravity="start|center_vertical"
@@ -198,6 +198,6 @@
             android:background="@drawable/bg_button_light_r8"
             android:gravity="center"
             android:paddingVertical="16dp"
-            android:text="@string/edit" />
+            android:text="@string/log_out" />
     </LinearLayout>
 </LinearLayout>

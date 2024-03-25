@@ -5,23 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_bg"
-    android:orientation="vertical"
-    android:paddingHorizontal="16dp">
+    android:orientation="vertical">
 
     <TextView
         style="@style/text_title_book_types"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
         android:text="@string/favorite" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favoriteFm_rvFavoriteBooks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:listitem="@layout/item_book_default" />

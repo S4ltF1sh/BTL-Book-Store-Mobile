@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="null"
+            android:background="@null"
             android:gravity="start|center_vertical"
             android:maxLines="1"
             android:text="@string/search_title_author"
@@ -44,7 +44,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoryFm_rvCategories"
+        android:id="@+id/categoryDetailFm_rvBooks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
