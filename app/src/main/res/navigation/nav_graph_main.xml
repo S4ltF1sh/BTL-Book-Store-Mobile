@@ -2,54 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_main"
-    app:startDestination="@id/mainHomeFragment">
+    android:id="@+id/nav_grpah_main"
+    app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/mainHomeFragment"
-        android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.MainHomeFragment"
-        android:label="MainHomeFragment"
-        tools:layout="@layout/fragment_main_home">
+        android:id="@+id/mainFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainHomeFragment_to_searchFragment"
+            android:id="@+id/action_mainFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
         <action
-            android:id="@+id/action_mainHomeFragment_to_bookDetailFragment"
-            app:destination="@id/bookDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainRecentFragment"
-        android:name="com.s4ltf1sh.bookstore.ui.main.mainRecentScreen.MainRecentFragment"
-        android:label="MainRecentFragment"
-        tools:layout="@layout/fragment_main_recent">
-        <action
-            android:id="@+id/action_mainRecentFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_mainRecentFragment_to_bookDetailFragment"
-            app:destination="@id/bookDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainCartFragment"
-        android:name="com.s4ltf1sh.bookstore.ui.main.mainCartScreen.MainCartFragment"
-        android:label="MainCartFragment"
-        tools:layout="@layout/fragment_main_cart">
-        <action
-            android:id="@+id/action_mainCartFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_mainCartFragment_to_bookDetailFragment"
-            app:destination="@id/bookDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainAccountFragment"
-        android:name="com.s4ltf1sh.bookstore.ui.main.mainAccountScreen.MainAccountFragment"
-        android:label="MainAccountFragment"
-        tools:layout="@layout/fragment_main_account">
-        <action
-            android:id="@+id/action_mainAccountFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_mainAccountFragment_to_bookDetailFragment"
+            android:id="@+id/action_mainFragment_to_bookDetailFragment"
             app:destination="@id/bookDetailFragment" />
     </fragment>
     <fragment
@@ -62,4 +26,5 @@
         android:name="com.s4ltf1sh.bookstore.ui.detailScreen.BookDetailFragment"
         android:label="BookDetailFragment"
         tools:layout="@layout/fragment_book_detail" />
+
 </navigation>

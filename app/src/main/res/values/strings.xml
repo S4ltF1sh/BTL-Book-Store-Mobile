@@ -103,4 +103,6 @@
     <string name="log_out">Log out</string>
     <string name="happy_reading">Happy Reading!</string>
     <string name="lastest">Lastest</string>
+    <string name="check_out">Check Out</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
 </resources>

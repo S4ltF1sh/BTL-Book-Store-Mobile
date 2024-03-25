@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainHomeFragment">
+    <fragment
+        android:id="@+id/mainHomeFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainHomeScreen.MainHomeFragment"
+        android:label="MainHomeFragment"
+        tools:layout="@layout/fragment_main_home">
+    </fragment>
+    <fragment
+        android:id="@+id/mainRecentFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainRecentScreen.MainRecentFragment"
+        android:label="MainRecentFragment"
+        tools:layout="@layout/fragment_main_recent">
+    </fragment>
+    <fragment
+        android:id="@+id/mainCartFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainCartScreen.MainCartFragment"
+        android:label="MainCartFragment"
+        tools:layout="@layout/fragment_main_cart">
+    </fragment>
+    <fragment
+        android:id="@+id/mainAccountFragment"
+        android:name="com.s4ltf1sh.bookstore.ui.main.mainAccountScreen.MainAccountFragment"
+        android:label="MainAccountFragment"
+        tools:layout="@layout/fragment_main_account">
+    </fragment>
+
+</navigation>

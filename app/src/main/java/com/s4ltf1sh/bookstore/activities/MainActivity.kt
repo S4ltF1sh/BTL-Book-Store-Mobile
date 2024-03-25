@@ -1,8 +1,10 @@
 package com.s4ltf1sh.bookstore.activities
 
+import android.util.Log
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.fragment.findNavController
 import com.s4ltf1sh.bookstore.R
 import com.s4ltf1sh.bookstore.base.activities.BaseActivity
 import com.s4ltf1sh.bookstore.data.model.Book
@@ -18,7 +20,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     override fun initView() {
         super.initView()
         setupNavController()
-        setupBotNav()
     }
 
     private fun setupNavController() {
@@ -26,16 +27,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             supportFragmentManager.findFragmentById(R.id.mainAct_navHost) as NavHostFragment
 
         navController = navHostFragment.navController
-    }
-
-    private fun setupBotNav() {
-        viewBinding.mainActBotNav.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            Log.d(
+                "MainAct",
+                "curDestination: $destination"
+            )
+        }
     }
 
     fun getBookListener(): BookDefaultVH.BookListener {
         return object : BookDefaultVH.BookListener {
             override fun onBookClicked(item: Book) {
                 // Handle book click
+                getCurrentParentFragment()?.findNavController()?.navigate(R.id.bookDetailFragment)
             }
 
             override fun onBookLongClicked(item: Book): Boolean {
@@ -43,5 +47,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                 return true
             }
         }
+    }
+
+    fun openSearchScreen() {
+        getCurrentParentFragment()?.findNavController()?.navigate(R.id.searchFragment)
+    }
+
+    private fun getCurrentParentFragment(): Fragment? {
+        return navHostFragment.childFragmentManager.fragments[0]
     }
 }

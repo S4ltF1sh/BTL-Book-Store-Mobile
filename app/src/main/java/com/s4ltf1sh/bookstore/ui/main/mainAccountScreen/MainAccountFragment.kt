@@ -6,4 +6,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainAccountFragment : BaseFragment<FragmentMainAccountBinding>(FragmentMainAccountBinding::inflate) {
+    override val backPressCallback: () -> Boolean
+        get() = {
+            requireActivity().finish()
+            true
+        }
 }
